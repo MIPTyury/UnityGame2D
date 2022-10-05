@@ -6,15 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private float speed = 5;
-
-    private Rigidbody2D rb;
-    private SpriteRenderer sprite;
+    
+    private bool facingRight = true;
     
     // Start is called before the first frame update
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
         SetZeroPos();
     }
 
@@ -31,11 +28,24 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed*Time.deltaTime);
 
-        sprite.flipX = dir.x < 0;
+        if (dir.x < 0 && facingRight)
+            Flip();
+        if (dir.x > 0 && !facingRight)
+            Flip();
+
     }
 
     private void SetZeroPos()
     {
         transform.position = Vector3.MoveTowards(transform.position,Vector3.zero, transform.position.magnitude);
+    }
+
+    private void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
