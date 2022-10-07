@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         if (rb.velocity.x > 0 && !facingRight)
             Flip();
-
     }
 
     private void SetZeroPos()
