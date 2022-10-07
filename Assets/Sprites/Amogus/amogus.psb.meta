@@ -90,6 +90,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: "\u042D\u043B\u043B\u0438\u043F\u0441 1"
@@ -352,7 +353,8 @@ ScriptedImporter:
     - {x: 19, y: 20}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -2, y: -10}
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 6, y: 14}
   - name: right leg
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -492,7 +494,8 @@ ScriptedImporter:
     - {x: 8, y: 9}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 29, y: -2}
+    uvTransform: {x: 40, y: 4}
+    spritePosition: {x: 11, y: 6}
   - name: left leg
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -632,7 +635,8 @@ ScriptedImporter:
     - {x: 8, y: 9}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -18, y: 35}
+    uvTransform: {x: 4, y: 41}
+    spritePosition: {x: 22, y: 6}
   characterData:
     bones:
     - name: bone_1
