@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,17 +9,17 @@ public class Entity : MonoBehaviour
     
     [Header("Animation settings")]
     public Animator animator;
+    
     private bool facingRight = true;
 
-    private void Update()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
     }
+    
     private void Flip()
     {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
+        gameObject.transform.Rotate(0, 180, 0);
 
         facingRight = !facingRight;
     }
