@@ -8,9 +8,11 @@ public class Entity : MonoBehaviour
     private Rigidbody2D rb;
     
     [Header("Animation settings")]
-    public Animator animator;
+    private Animator animator;
     
     private bool facingRight = true;
+
+    [SerializeField] private int _entityMaxHealth;
 
     private void Awake()
     {
@@ -30,5 +32,10 @@ public class Entity : MonoBehaviour
             Flip();
         if (rb.velocity.x > 0 && !facingRight)
             Flip();
+    }
+
+    public int GetEntityMaxHealth()
+    {
+        return _entityMaxHealth;
     }
 }
