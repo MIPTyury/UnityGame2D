@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Entity))]
-
 public class Health : MonoBehaviour
 {
     [SerializeField] [Range(0, 100)] private int _currHealth = 0;

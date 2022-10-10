@@ -21,7 +21,7 @@ public class Entity : MonoBehaviour
     
     private void Flip()
     {
-        gameObject.transform.Rotate(0, 180, 0);
+        gameObject.transform.Rotate(0, 180, 0, Space.Self);
 
         facingRight = !facingRight;
     }
