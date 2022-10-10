@@ -11,7 +11,7 @@ public class CameraTracking : MonoBehaviour
     private void Awake()
     {
         if (!player)
-            player = FindObjectOfType<PlayerMovement>().transform;
+            player = FindObjectOfType<MovementControlls>().transform;
     }
 
     // Update is called once per frame
